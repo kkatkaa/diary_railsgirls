@@ -13,4 +13,8 @@ class EntriesController < ApplicationController
     @entry = Entry.find(params["id"])
     render 'entries/show'
   end
+
+  def new
+    render 'entries/new'
+  end
 end
