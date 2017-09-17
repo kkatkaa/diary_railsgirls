@@ -17,4 +17,13 @@ class EntriesController < ApplicationController
   def new
     render 'entries/new'
   end
+
+  def create
+    # entry_params = params["entry"]
+    # entry = Entry.create(entry_params)
+    # redirect_to(entry_path(entry))
+    #render(:plain => params['entry']['title'].inspect)
+    entry = Entry.create(title: params["entry"]["title"], date:Date.current, contents:params["entry"]["contents"])
+    redirect_to(entry_path(entry))
+  end
 end
