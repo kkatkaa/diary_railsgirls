@@ -6,7 +6,7 @@ class EntriesController < ApplicationController
       ["https://en.wikibooks.org/wiki/Ruby_Programming", "Wikibooks"],
       ["http://guides.rubyonrails.org", "Ruby on Rails Guides"],
     ]
-    render 'entries/index'
+    render = 'entries/index'
   end
 
   def show
